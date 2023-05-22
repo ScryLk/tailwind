@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+  <div class="min-h-full">
+    <nav class="bg-gray-800">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <img class="h-8 w-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                alt="Your Company">
+            </div>
+            <div class="hidden md:block">
+              <div class="ml-10 flex items-baseline space-x-4">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                  aria-current="page">Dashboard</a>
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Team</a>
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+                <a href="#"
+                  class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Reports</a>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block">
+            <div class="ml-4 flex items-center md:ml-6">
+              <button type="button"
+                class="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <span class="sr-only">View notifications</span>
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                </svg>
+              </button>
+
+              <!-- Profile dropdown -->
+              <div class="relative ml-3">
+
+                <!--
+                Dropdown menu, show/hide based on menu state.
+
+                Entering: "transition ease-out duration-100"
+                  From: "transform opacity-0 scale-95"
+                  To: "transform opacity-100 scale-100"
+                Leaving: "transition ease-in duration-75"
+                  From: "transform opacity-100 scale-100"
+                  To: "transform opacity-0 scale-95"
+              -->
+
+              </div>
+            </div>
+          </div>
+          <div class="-mr-2 flex md:hidden">
+            <!-- Mobile menu button -->
+            <button type="button"
+              class="inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+              aria-controls="mobile-menu" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <!-- Menu open: "hidden", Menu closed: "block" -->
+              <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!-- Menu open: "block", Menu closed: "hidden" -->
+              <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu, show/hide based on menu state. -->
+      <div class="md:hidden" id="mobile-menu">
+        <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
+          <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+          <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+            aria-current="page">Dashboard</a>
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Team</a>
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Projects</a>
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Calendar</a>
+          <a href="#"
+            class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Reports</a>
+        </div>
+        <div class="border-t border-gray-700 pb-3 pt-4">
+          <div class="flex items-center px-5">
+            <button type="button"
+              class="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+              <span class="sr-only">View notifications</span>
+              <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+              </svg>
+            </button>
+
+          </div>
+        </div>
+    </nav>
+
+    <header class="bg-white shadow">
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
+
+      </div>
+      <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+        <div class="relative inline-block text-left">
+          <div>
+
+          </div>
+
+          <!--
+          Dropdown menu, show/hide based on menu state.
+      
+          Entering: "transition ease-out duration-100"
+            From: "transform opacity-0 scale-95"
+            To: "transform opacity-100 scale-100"
+          Leaving: "transition ease-in duration-75"
+            From: "transform opacity-100 scale-100"
+            To: "transform opacity-0 scale-95"
+        -->
+          <div class="relative inline-block">
+            <button
+              class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-button">
+              <span class="mr-1">Selecione uma opção</span>
+              <svg class="fill-current h-8 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="20 20 20 20">
+                <path d="M7 7l3-3 3 3z" />
+              </svg>
+            </button>
+            <ul id="myDropdown"
+              class="absolute hidden bg-white border border-gray-300 min-w-full rounded mt-1 text-gray-700 shadow">
+              <li><a class="block px-4 py-2 hover:bg-gray-100" href="#">Opção 1</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-100" href="#">Opção 2</a></li>
+              <li><a class="block px-4 py-2 hover:bg-gray-100" href="#">Opção 3</a></li>
+            </ul>
+          </div>
+
+          <!--
+              Select popover, show/hide based on select state.
+        
+              Entering: ""
+                From: ""
+                To: ""
+              Leaving: "transition ease-in duration-100"
+                From: "opacity-100"
+                To: "opacity-0"
+            -->
+
+        </div>
+      </div>
+
+  </div>
+  </div>
+  </header>
+  <main>
+    <div class="mx-auto max-w-8 py-6 sm:px-6 lg:px-8">
+      <div class="flex flex-col">
+        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+            <div class="overflow-hidden">
+              <table class="min-w-full text-left text-sm font-light">
+                <thead class="border-b font-medium dark:border-neutral-500">
+                  <tr id="myDropdown">
+                    <th scope="col" class="px-6 py-4">#</th>
+                    <th scope="col" class="px-6 py-4">Data</th>
+                    <th scope="col" class="px-6 py-4">Item</th>
+                    <th scope="col" class="px-6 py-4">Status</th>
+                    <th scope="col" class="px-6 py-4">Observação</th>
+                    <th scope="col" class="px-6 py-4">Visto por quem</th>
+                    <th scope="col" class="px-6 py-4">Hora Vista</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b dark:border-neutral-500">
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">1</td>
+                    <td class="whitespace-nowrap px-6 id=" data-col" py-4"></td>
+                    <td class="whitespace-nowrap px-6 py-4">Otto</td>
+                    <td class="whitespace-nowrap px-6 py-4"><button
+                        class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-button">
+                        <span class="mr-1">Selecione uma opção</span>
+                        <svg class="fill-current h-8 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="20 20 20 20">
+                          <path d="M7 7l3-3 3 3z" />
+                        </svg>
+                      </button></td>
+                  </tr>
+                  <tr class="border-b dark:border-neutral-500">
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">2</td>
+                    <td class="whitespace-nowrap px-6 id=" data-col" py-4"></td>
+                    <td class="whitespace-nowrap px-6 py-4">Otto</td>
+                    <td class="whitespace-nowrap px-6 py-4"><button
+                        class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-button">
+                        <span class="mr-1">Selecione uma opção</span>
+                        <svg class="fill-current h-8 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="20 20 20 20">
+                          <path d="M7 7l3-3 3 3z" />
+                        </svg>
+                      </button></td>
+                  </tr>
+                  <tr class="border-b dark:border-neutral-500">
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">3</td>
+                    <td class="whitespace-nowrap px-6 id=" data-col" py-4"></td>
+                    <td class="whitespace-nowrap px-6 py-4">Otto</td>
+                    <td class="whitespace-nowrap px-6 py-4"><button
+                        class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-button">
+                        <span class="mr-1">Selecione uma opção</span>
+
+                        <svg class="fill-current h-8 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="20 20 20 20">
+                          <path d="M7 7l3-3 3 3z" />
+                        </svg>
+                      </button></td>
+
+
+                  </tr>
+
+                  <tr class="border-b dark:border-neutral-500">
+                    <td class="whitespace-nowrap px-6 py-4 font-medium">4</td>
+                    <td class="whitespace-nowrap px-6 id=" data-col" py-4"></td>
+                    <td class="whitespace-nowrap px-6 py-4">Otto</td>
+                    <td class="whitespace-nowrap px-6 py-4"><button
+                        class="bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center dropdown-button">
+                        <span class="mr-1">Selecione uma opção</span>
+                        <svg class="fill-current h-8 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="20 20 20 20">
+                          <path d="M7 7l3-3 3 3z" />
+                        </svg>
+                      </button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  </div>
+
+
+
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var dropdownButton = document.querySelector('.dropdown-button');
+    var dropdown = document.querySelector('#myDropdown');
+
+    dropdownButton.addEventListener('click', function () {
+      dropdown.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', function (event) {
+      var isClickInside = dropdownButton.contains(event.target);
+      if (!isClickInside) {
+        dropdown.classList.add('hidden');
+      }
+    });
+  });
+
+
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const dataCol = document.getElementsByClassName("data-col");
+
+    // Obtém as datas ou timestamps desejados
+    const datas = ["2023-05-18", "2023-05-19", "2023-05-20"];
+    // Pode ser um array de datas ou timestamps obtidos de alguma fonte de dados
+
+    for (let i = 0; i < datas.length; i++) {
+      const dataAtual = new Date(datas[i]);
+      const celulaData = dataCol[i];
+
+      // Formata a data conforme necessário
+      const formatoData = {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      };
+      const dataFormatada = dataAtual.toLocaleDateString("pt-BR", formatoData);
+
+      celulaData.textContent = dataFormatada;
+    }
+  });
+</script>
+
+</html>
