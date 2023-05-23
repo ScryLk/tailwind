@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="tidy-table.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+
+    <script type="text/javascript" src="tidy-table.min.js"></script>
+    <script>
+      var output;
+
+      window.onload = function() {
+        var options = {
+          enableCheckbox: true,
+          enableMenu:     true,
+          reverseSortDir: true,
+          responsive:     false
+        };
+
+        const settings = {
+          columnTitles: ['ID', 'Treino', 'Repetições', 'Data', 'Status'],
+          columnValues: [
+            ['1', 'Treino 1', '5', '23/05/2023', 'Pendente'],
+            ['2', 'Treino 2', '5', '23/05/2023', 'Pendente'],
+            ['3', 'Treino 3', '5', '23/05/2023', 'Pendente'],
+            ['4', 'Treino 4', '5', '23/05/2023', 'Pendente'],
+            ['5', 'Treino 5', '5', '23/05/2023','Pendente']
+          ],
+          menuOptions: [
+            ['- Action -', null],
+            ['Mais Antigo', {callback: doSomething1}],
+            ['Mais recente', {callback: doSomething2}]
+          ],
+          postProcess: {
+            table:  doSomething3,
+            column: doSomething4,
+            menu:   doSomething5
+          }
+        };
+
+        var container = document.getElementById('tidy-table');
+
+        tidyTable(container, settings, options);
+
+        output = document.getElementById();
+      };
+
+      // Do something with selected results.
+      function doSomething1(rows) {
+        output.innerText = 'MENU: callback1(rows=' + rows.length + ')';
+      }
+
+      function doSomething2(rows) {
+        output.innerText = 'MENU: callback2(rows=' + rows.length + ')';
+      }
+
+      // Post-process DOM elements.
+      function doSomething3(table) {
+        table.addEventListener('dblclick', function() {
+          output.innerText = 'TABLE: post-process(table)';
+        });
+      }
+
+      function doSomething4(col) {
+        col.addEventListener('click', function() {
+          output.innerText = 'COL: post-process(text="' + this.textContent + '")';
+        });
+      }
+
+      function doSomething5(menu) {
+
+        // Rename default option.
+        menu.children[0].innerText = '- Ordenar por -';
+      }
+    </script>
+
+    <title>Create a HTML table that can be sorted, selected, and post-processed using a simple callback | Tidy Table</title>
+  </head>
+  <body>
+    <div id="tidy-table"></div>
+    <div id="output"></div>
+  </body>
+</html>
